@@ -1,0 +1,18 @@
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
+import { useSaldo } from '../Context/ContaContext';
+
+const Saldo = (props) => {
+  const { saldo } = useSaldo();
+  
+  return <Text style={styles.text}> Saldo: {saldo} </Text>;
+};
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 20,
+    textAlingn: 'center',
+    paddingTop: 20,
+    fontWeight: 'bold',
+  },
+});
+export default Saldo;
